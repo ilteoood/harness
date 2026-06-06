@@ -28,4 +28,9 @@ export default [
     branch: 'main',
     skills: ['fastify', 'node'],
   },
+  {
+    repo: 'SimoneAvogadro/android-reverse-engineering-skill',
+    branch: 'master',
+    skills: ['android-reverse-engineering'],
+  },
 ];
