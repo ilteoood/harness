@@ -28,4 +28,9 @@ export default [
     branch: 'main',
     skills: ['fastify', 'node'],
   },
+  {
+    repo: 'raineorshine/npm-check-updates',
+    branch: 'main',
+    skills: ['npm-check-updates'],
+  },
 ];
