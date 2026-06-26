@@ -34,8 +34,11 @@ for (const { repo, branch = 'main', skills } of config) {
       const relativePath = blob.path.replace(`skills/${skill}/`, '');
       const localPath = join(dir, relativePath);
       await mkdir(dirname(localPath), { recursive: true });
-      const content = execSync(`gh api repos/${repo}/git/blobs/${blob.sha} --jq .content`, { encoding: 'utf8' });
-      await writeFile(localPath, Buffer.from(content.trim(), 'base64'));
+      const content = execSync(
+        `gh api repos/${repo}/git/blobs/${blob.sha} -H "Accept: application/vnd.github.raw"`,
+        { encoding: 'buffer', maxBuffer: 50 * 1024 * 1024 }
+      );
+      await writeFile(localPath, content);
       console.log(`  + ${skill}/${relativePath}`);
     }
   }

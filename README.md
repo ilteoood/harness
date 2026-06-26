@@ -34,6 +34,14 @@ Each skill is a directory containing a `SKILL.md` file with YAML frontmatter:
 - `node/` - Provides domain-specific best practices for Node.js development with TypeScript, covering type stripping, async patterns, error handling, streams, modules, testing, performance, caching, logging, and more.
 - `fastify/` - Guides development of Fastify Node.js backend servers and REST APIs using TypeScript or JavaScript. Use when building, configuring, or debugging a Fastify application — including defining routes, implementing plugins, setting up JSON Schema validation, handling errors, optimising performance, managing authentication, configuring CORS and security headers, integrating databases, working with WebSockets, and deploying to production.
 
+### From [callstackincubator/agent-skills](https://github.com/callstackincubator/agent-skills)
+
+- `create-react-native-library/` - Scaffolds React Native libraries with `create-react-native-library` for standalone libraries or local native modules and views. Use when creating or working on React Native libraries or adding native functionality in an existing app.
+- `react-native-best-practices/` - Provides React Native performance optimization guidelines for FPS, TTI, bundle size, memory leaks, re-renders, and animations. Applies to tasks involving Hermes optimization, JS thread blocking, bridge overhead, FlashList, native modules, or debugging jank and frame drops.
+- `react-native-brownfield-migration/` - Provides an incremental adoption strategy to migrate native iOS or Android apps to React Native or Expo using `@callstack/react-native-brownfield` for initial setup. Use when planning migration steps, packaging XCFramework/AAR artifacts, and integrating them into host apps.
+- `react-navigation/` - Provides React Navigation UI patterns for stacks, tabs, drawers etc. Use when building navigation UIs with React Navigation, configuring headers, bottom sheets or handling safe areas and insets.
+- `upgrading-react-native/` - Upgrades React Native apps to newer versions by applying `rn-diff-purge` template diffs, updating `package.json` dependencies, migrating native iOS and Android configuration, resolving CocoaPods and Gradle changes, and handling breaking API updates. Use when upgrading React Native, bumping RN version, updating from RN 0.x to 0.y, or migrating Expo SDK alongside a React Native upgrade.
+
 ### From other sources
 
 - `npm-check-updates/` - Upgrade `package.json` dependencies to the latest versions with [npm-check-updates](https://github.com/raineorshine/npm-check-updates). Use when checking for outdated dependencies, upgrading packages with filters/rejections, targeting specific version ranges, scanning monorepos, running interactive selection, detecting breaking upgrades with `--doctor`, or using the programmatic API.
