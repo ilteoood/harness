@@ -33,4 +33,15 @@ export default [
     branch: 'main',
     skills: ['npm-check-updates'],
   },
+  {
+    repo: 'callstackincubator/agent-skills',
+    branch: 'main',
+    skills: [
+      'create-react-native-library',
+      'react-native-best-practices',
+      'react-native-brownfield-migration',
+      'react-navigation',
+      'upgrading-react-native',
+    ],
+  },
 ];
