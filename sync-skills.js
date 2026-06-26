@@ -1,46 +1,55 @@
 #!/usr/bin/env node
 import { execSync } from 'child_process';
-import { mkdir, writeFile, readdir } from 'fs/promises';
-import { join, dirname } from 'path';
+import { mkdir, writeFile } from 'fs/promises';
+import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
-const config = await import('./sync-config.js').then(m => m.default);
+const config = (await import('./sync-config.js')).default;
+
+const headers = {
+  Accept: 'application/vnd.github.raw',
+  Authorization: `Bearer ${execSync('gh auth token', { encoding: 'utf8' }).trim()}`,
+};
+
+async function ghJson(path) {
+  const res = await fetch(`https://api.github.com${path}`, { headers: { ...headers, Accept: 'application/vnd.github+json' } });
+  if (!res.ok) throw new Error(`${path}: ${res.status} ${res.statusText}`);
+  return res.json();
+}
+
+async function ghRaw(path) {
+  const res = await fetch(`https://api.github.com${path}`, { headers });
+  if (!res.ok) throw new Error(`${path}: ${res.status} ${res.statusText}`);
+  return Buffer.from(await res.arrayBuffer());
+}
 
 for (const { repo, branch = 'main', skills } of config) {
   console.log(`Syncing from ${repo} (${branch})...`);
 
-  const commit = execSync(`gh api repos/${repo}/branches/${branch} --jq .commit.sha`, { encoding: 'utf8' }).trim();
-  const treeSha = JSON.parse(execSync(`gh api repos/${repo}/git/trees/${commit}?recursive=1 --jq .`, { encoding: 'utf8' }))
-    .tree.find(t => t.path === 'skills')?.sha;
+  const commit = (await ghJson(`/repos/${repo}/branches/${branch}`)).commit.sha;
+  const tree = (await ghJson(`/repos/${repo}/git/trees/${commit}?recursive=1`)).tree;
 
   for (const skill of skills) {
-    const skillTree = JSON.parse(execSync(`gh api repos/${repo}/git/trees/${commit}?recursive=1 --jq .`, { encoding: 'utf8' }))
-      .tree.find(t => t.path === `skills/${skill}`)?.sha;
-
-    if (!skillTree) {
+    const prefix = `skills/${skill}/`;
+    const blobs = tree.filter(t => t.type === 'blob' && t.path.startsWith(prefix));
+    if (!blobs.length) {
       console.log(`  ${skill}: not found, skipping`);
       continue;
     }
 
     const dir = join(__dirname, 'skills', skill);
-    await mkdir(join(dir, 'references'), { recursive: true });
+    await mkdir(dir, { recursive: true });
 
-    const blobs = JSON.parse(execSync(`gh api repos/${repo}/git/trees/${skillTree}?recursive=1 --jq .`, { encoding: 'utf8' }))
-      .tree.filter(t => t.type === 'blob');
-
-    for (const blob of blobs) {
-      const relativePath = blob.path.replace(`skills/${skill}/`, '');
+    await Promise.all(blobs.map(async blob => {
+      const relativePath = blob.path.slice(prefix.length);
       const localPath = join(dir, relativePath);
       await mkdir(dirname(localPath), { recursive: true });
-      const content = execSync(
-        `gh api repos/${repo}/git/blobs/${blob.sha} -H "Accept: application/vnd.github.raw"`,
-        { encoding: 'buffer', maxBuffer: 50 * 1024 * 1024 }
-      );
+      const content = await ghRaw(`/repos/${repo}/git/blobs/${blob.sha}`);
       await writeFile(localPath, content);
       console.log(`  + ${skill}/${relativePath}`);
-    }
+    }));
   }
 }
 
