@@ -44,4 +44,9 @@ export default [
       'upgrading-react-native',
     ],
   },
+  {
+    repo: 'slidevjs/slidev',
+    branch: 'main',
+    skills: ['slidev'],
+  },
 ];

@@ -42,6 +42,10 @@ Each skill is a directory containing a `SKILL.md` file with YAML frontmatter:
 - `react-navigation/` - Provides React Navigation UI patterns for stacks, tabs, drawers etc. Use when building navigation UIs with React Navigation, configuring headers, bottom sheets or handling safe areas and insets.
 - `upgrading-react-native/` - Upgrades React Native apps to newer versions by applying `rn-diff-purge` template diffs, updating `package.json` dependencies, migrating native iOS and Android configuration, resolving CocoaPods and Gradle changes, and handling breaking API updates. Use when upgrading React Native, bumping RN version, updating from RN 0.x to 0.y, or migrating Expo SDK alongside a React Native upgrade.
 
+### From [slidevjs/slidev](https://github.com/slidevjs/slidev)
+
+- `slidev/` - Create and present web-based slidedecks for developers using Slidev with Markdown, Vue components, code highlighting, animations, and interactive features. Use when building technical presentations, conference talks, code walkthroughs, teaching materials, or developer decks.
+
 ### From other sources
 
 - `npm-check-updates/` - Upgrade `package.json` dependencies to the latest versions with [npm-check-updates](https://github.com/raineorshine/npm-check-updates). Use when checking for outdated dependencies, upgrading packages with filters/rejections, targeting specific version ranges, scanning monorepos, running interactive selection, detecting breaking upgrades with `--doctor`, or using the programmatic API.
