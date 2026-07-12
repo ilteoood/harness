@@ -7,7 +7,7 @@ description: Upgrade package.json dependencies to the latest versions with npm-c
 
 `npm-check-updates` upgrades your `package.json` dependencies to the latest versions while preserving your existing version-range policy (`^17.0.2` → `^18.3.1`). It only modifies `package.json`; the user must run their package manager's install command (e.g. `npm install`) to update `package-lock.json` and `node_modules`.
 
-The CLI is exposed as `npm-check-updates` and the shorter `ncu`. The library is dual ESM/CJS, importable from Node.
+The CLI is exposed as `npm-check-updates` and the shorter `ncu`. The library is pure ESM, importable from Node (and loadable from CommonJS via `require()`).
 
 ## When to reach for this skill
 
@@ -20,26 +20,28 @@ The CLI is exposed as `npm-check-updates` and the shorter `ncu`. The library is 
 
 ## Quick start
 
-    # Dry run: print upgrades without touching files.
-    ncu
+```sh
+# Dry run: print upgrades without touching files.
+ncu
 
-    # Write the upgrades back into package.json, then install.
-    ncu -u
-    npm install
+# Write the upgrades back into package.json, then install.
+ncu -u
+npm install
 
-    # Interactively pick which packages to upgrade.
-    ncu -i
+# Interactively pick which packages to upgrade.
+ncu -i
 
-    # Only a subset of packages.
-    ncu -f "react,react-dom"
-    ncu "/^@types\//"
+# Only a subset of packages.
+ncu -f "react,react-dom"
+ncu "/^@types\//"
 
-    # Bump only patch / minor versions.
-    ncu --target patch
-    ncu --target minor
+# Bump only patch / minor versions.
+ncu --target patch
+ncu --target minor
 
-    # Skip a package.
-    ncu -x typescript,eslint
+# Skip a package.
+ncu -x typescript,eslint
+```
 
 ## Critical flags
 
@@ -119,9 +121,11 @@ const upgraded = await ncu({
 console.log(upgraded) // { 'react': '^18.3.1', 'react-dom': '^18.3.1' }
 ```
 
-Run it via `tsx` (the repo is pure ESM):
+Run it directly with Node:
 
-    tsx ./scripts/check-deps.ts
+```sh
+node ./scripts/check-deps.ts
+```
 
 ## Recommended workflows
 
@@ -135,27 +139,33 @@ Run it via `tsx` (the repo is pure ESM):
 
 ### Detect breaking upgrades automatically
 
-    ncu --doctor -u
+```sh
+ncu --doctor -u
+```
 
 Reverts broken upgrades one at a time and prints the offender.
 
 ### Monorepos
 
-    # All workspaces, including the root.
-    ncu -uw
+```sh
+# All workspaces, including the root.
+ncu -uw
 
-    # All packages.json files under the cwd.
-    ncu --deep -u
+# All packages.json files under the cwd.
+ncu --deep -u
 
-    # A specific glob, merging root config.
-    ncu --packageFile 'packages/*/package.json' --mergeConfig -u
+# A specific glob, merging root config.
+ncu --packageFile 'packages/*/package.json' --mergeConfig -u
+```
 
 ### Custom registry / private mirror
 
-    ncu --registry https://npm.example.com --packageManager npm
+```sh
+ncu --registry https://npm.example.com --packageManager npm
 
-    # Or a static JSON catalog hosted anywhere.
-    ncu --registry https://example.com/versions.json --registryType json
+# Or a static JSON catalog hosted anywhere.
+ncu --registry https://example.com/versions.json --registryType json
+```
 
 ## Pitfalls and gotchas
 
@@ -169,11 +179,13 @@ Reverts broken upgrades one at a time and prints the offender.
 
 ## Verification cheatsheet
 
-    # Show all CLI options.
-    ncu --help
+```sh
+# Show all CLI options.
+ncu --help
 
-    # Extended help for a single flag.
-    ncu --help --filter
-    ncu --help --target
-    ncu --help --cooldown
-    ncu --help --doctor
+# Extended help for a single flag.
+ncu --help --filter
+ncu --help --target
+ncu --help --cooldown
+ncu --help --doctor
+```
