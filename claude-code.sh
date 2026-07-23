@@ -25,7 +25,7 @@ apt-get install gh nodejs -y
 
 gh auth setup-git
 
-npm i -g skills
+npm i -g skills pnpm
 
 skills add https://github.com/ilteoood/harness -g -a claude-code -y
 
