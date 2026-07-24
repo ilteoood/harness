@@ -46,9 +46,22 @@ Each skill is a directory containing a `SKILL.md` file with YAML frontmatter:
 
 - `slidev/` - Create and present web-based slidedecks for developers using Slidev with Markdown, Vue components, code highlighting, animations, and interactive features. Use when building technical presentations, conference talks, code walkthroughs, teaching materials, or developer decks.
 
-### From other sources
+### From [anthropics/skills](https://github.com/anthropics/skills)
+
+- `frontend-design/` - Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defaults.
+
+### From [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills)
+
+- `web-design-guidelines/` - Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best practices".
+
+### Other sources
 
 - `npm-check-updates/` - Upgrade `package.json` dependencies to the latest versions with [npm-check-updates](https://github.com/raineorshine/npm-check-updates). Use when checking for outdated dependencies, upgrading packages with filters/rejections, targeting specific version ranges, scanning monorepos, running interactive selection, detecting breaking upgrades with `--doctor`, or using the programmatic API.
+
+### Manually added
+
+- `react-native-development/` - Core engineering conventions for building React Native applications with TypeScript. Covers project structure, component/hook placement, TypeScript standards, performance patterns, centralized locators and screen names, API hook patterns, i18n key formatting, unit testing with coverage gates, and the pre-commit quality workflow (lint, typecheck, test, snapshots, conventional commits).
+- `react-frontend-development/` - Domain-specific best practices for building React Single Page Applications with TypeScript. Covers feature-based architecture, component and hook placement, TypeScript type safety, functional component patterns, performance optimisation, CSS Modules styling, routing with centralised route constants, data fetching with TanStack React Query, internationalization, accessibility, environment variable validation, and unit testing with Vitest + React Testing Library.
 
 ## Usage
 
