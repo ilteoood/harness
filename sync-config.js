@@ -49,4 +49,14 @@ export default [
     branch: 'main',
     skills: ['slidev'],
   },
+  {
+    repo: 'anthropics/skills',
+    branch: 'main',
+    skills: ['frontend-design'],
+  },
+  {
+    repo: 'vercel-labs/agent-skills',
+    branch: 'main',
+    skills: ['web-design-guidelines'],
+  },
 ];
