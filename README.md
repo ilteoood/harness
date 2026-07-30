@@ -54,6 +54,10 @@ Each skill is a directory containing a `SKILL.md` file with YAML frontmatter:
 
 - `web-design-guidelines/` - Review UI code for Web Interface Guidelines compliance. Use when asked to "review my UI", "check accessibility", "audit design", "review UX", or "check my site against best practices".
 
+### From [github/gh-stack](https://github.com/github/gh-stack)
+
+- `gh-stack/` - Manage stacked branches and pull requests with the `gh-stack` GitHub CLI extension. Use when the user wants to create, push, rebase, sync, navigate, or view stacks of dependent PRs. Triggers on tasks involving stacked diffs, dependent pull requests, branch chains, or incremental code review workflows.
+
 ### Other sources
 
 - `npm-check-updates/` - Upgrade `package.json` dependencies to the latest versions with [npm-check-updates](https://github.com/raineorshine/npm-check-updates). Use when checking for outdated dependencies, upgrading packages with filters/rejections, targeting specific version ranges, scanning monorepos, running interactive selection, detecting breaking upgrades with `--doctor`, or using the programmatic API.

@@ -59,4 +59,9 @@ export default [
     branch: 'main',
     skills: ['web-design-guidelines'],
   },
+  {
+    repo: 'github/gh-stack',
+    branch: 'main',
+    skills: ['gh-stack'],
+  },
 ];
