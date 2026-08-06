@@ -66,6 +66,7 @@ Each skill is a directory containing a `SKILL.md` file with YAML frontmatter:
 
 - `react-native-development/` - Core engineering conventions for building React Native applications with TypeScript. Covers project structure, component/hook placement, TypeScript standards, performance patterns, centralized locators and screen names, API hook patterns, i18n key formatting, unit testing with coverage gates, and the pre-commit quality workflow (lint, typecheck, test, snapshots, conventional commits).
 - `react-frontend-development/` - Domain-specific best practices for building React Single Page Applications with TypeScript. Covers feature-based architecture, component and hook placement, TypeScript type safety, functional component patterns, performance optimisation, CSS Modules styling, routing with centralised route constants, data fetching with TanStack React Query, internationalization, accessibility, environment variable validation, and unit testing with Vitest + React Testing Library.
+- `localhost-run/` - Expose local HTTP, HTTPS, and TLS applications to the public internet via [localhost.run](https://localhost.run) SSH tunnels. Covers the basic `ssh -R` command, HTTP tunnel mode with auto-HTTPS and proxy headers, TLS passthrough for non-HTTP protocols, Custom Domain setup with DNS records, the Forever Free Tier restrictions, tunneling WordPress / web frameworks / SSH, and troubleshooting connection issues.
 
 ## Usage
 
