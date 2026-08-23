@@ -1,0 +1,5 @@
+.git
+.tokensave
+skills
+node_modules
+*.log
