@@ -25,7 +25,7 @@ apt-get install gh nodejs -y
 
 gh auth setup-git
 
-npm i -g skills pnpm
+npm i -g skills pnpm lighthouse
 
 skills add https://github.com/ilteoood/harness -g -a claude-code -y
 
@@ -46,6 +46,8 @@ tar -xzf /tmp/tokensave.tar.gz -C /usr/local/bin
 rm /tmp/tokensave.tar.gz
 chmod +x /usr/local/bin/tokensave
 tokensave install --agent claude --git-hook yes
+
+gh extension install github/gh-stack
 
 git config --global user.email "matteopietro.dazzi@gmail.com"
 git config --global user.name "Matteo Pietro Dazzi"
