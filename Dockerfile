@@ -47,4 +47,6 @@ RUN gh auth setup-git \
  && git config --global user.email "matteopietro.dazzi@gmail.com" \
  && git config --global user.name "Matteo Pietro Dazzi"
 
-ENTRYPOINT ["paseo", "daemon", "start", "--foreground"]
+COPY --chmod=755 entrypoint.sh /usr/local/bin/entrypoint.sh
+
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
