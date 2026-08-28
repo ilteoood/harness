@@ -6,7 +6,8 @@ Skills for AI agents following the [skills.sh](https://skills.sh) format.
 
 Skills are grouped by the category of project they apply to:
 
-- `core/` - Universal skills reused across every project (git, GitHub, docs, security, dev tooling). These stay in the root `.claude` folder.
+- `core/` - Universal skills reused across every project (git, GitHub, security, dev tooling). These stay in the root `.claude` folder.
+- `documentation/` - Skills for authoring, reviewing, and stress-testing written material (READMEs, specs, ADRs, design interviews).
 - `web-development/` - Skills specific to web frontends (React, UI/UX, design).
 - `nodejs-development/` - Skills specific to Node.js backends (Fastify, npm).
 - `mobile-development/` - Skills specific to React Native mobile apps.
@@ -25,13 +26,6 @@ From [github/awesome-copilot](https://github.com/github/awesome-copilot):
 - `codeql/` - Comprehensive guide for GitHub CodeQL including alert management, CLI commands, compiled languages, SARIF output, troubleshooting, and workflow configuration
 - `commit-message-storyteller/` - Generate meaningful commit messages using story-telling principles
 - `conventional-commit/` - Execute conventional commit format with smart commit message generation
-- `create-agentsmd/` - Create agent model definitions for AI coding agents
-- `create-implementation-plan/` - Create implementation plans for features and changes
-- `create-llms/` - Create LLMS full text documentation files
-- `create-readme/` - Generate README documentation files
-- `create-specification/` - Create technical specifications and design documents
-- `create-technical-spike/` - Research and document technical spikes
-- `create-tldr-page/` - Create TLDR-style documentation pages
 - `dependabot/` - Comprehensive guide for configuring and managing GitHub Dependabot
 - `gh-cli/` - GitHub CLI (gh) comprehensive reference for repositories, issues, pull requests, Actions, projects, releases, gists, codespaces, organizations, extensions, and all GitHub operations from the command line
 - `git-commit/` - Execute git commit with conventional commit message analysis, intelligent staging, and message generation
@@ -46,6 +40,24 @@ From [github/gh-stack](https://github.com/github/gh-stack):
 Manually added:
 
 - `localhost-run/` - Expose local HTTP, HTTPS, and TLS applications to the public internet via [localhost.run](https://localhost.run) SSH tunnels. Covers the basic `ssh -R` command, HTTP tunnel mode with auto-HTTPS and proxy headers, TLS passthrough for non-HTTP protocols, Custom Domain setup with DNS records, the Forever Free Tier restrictions, tunneling WordPress / web frameworks / SSH, and troubleshooting connection issues.
+
+### `documentation/`
+
+From [github/awesome-copilot](https://github.com/github/awesome-copilot):
+
+- `create-agentsmd/` - Create agent model definitions for AI coding agents
+- `create-implementation-plan/` - Create implementation plans for features and changes
+- `create-llms/` - Create LLMS full text documentation files
+- `create-readme/` - Generate README documentation files
+- `create-specification/` - Create technical specifications and design documents
+- `create-technical-spike/` - Research and document technical spikes
+- `create-tldr-page/` - Create TLDR-style documentation pages
+
+From [mattpocock/skills](https://github.com/mattpocock/skills):
+
+- `grill-me/` - A relentless interview to sharpen a plan or design. User-invoked wrapper around the `grilling` skill.
+- `grill-with-docs/` - A relentless interview that also produces ADRs and a glossary as the design tree is resolved.
+- `grilling/` - Interview the user relentlessly about a plan, decision, or idea until every branch of the design tree is resolved. Use when the user wants to stress-test their thinking or uses any 'grill' trigger phrase.
 
 ### `web-development/`
 
