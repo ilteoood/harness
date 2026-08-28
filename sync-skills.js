@@ -31,15 +31,15 @@ for (const { repo, branch = 'main', skills } of config) {
   const commit = (await ghJson(`/repos/${repo}/branches/${branch}`)).commit.sha;
   const tree = (await ghJson(`/repos/${repo}/git/trees/${commit}?recursive=1`)).tree;
 
-  for (const skill of skills) {
-    const prefix = `skills/${skill}/`;
+  for (const { name, category } of skills) {
+    const prefix = `skills/${name}/`;
     const blobs = tree.filter(t => t.type === 'blob' && t.path.startsWith(prefix));
     if (!blobs.length) {
-      console.log(`  ${skill}: not found, skipping`);
+      console.log(`  ${name}: not found, skipping`);
       continue;
     }
 
-    const dir = join(__dirname, 'skills', skill);
+    const dir = join(__dirname, 'skills', category, name);
     await mkdir(dir, { recursive: true });
 
     await Promise.all(blobs.map(async blob => {
@@ -48,7 +48,7 @@ for (const { repo, branch = 'main', skills } of config) {
       await mkdir(dirname(localPath), { recursive: true });
       const content = await ghRaw(`/repos/${repo}/git/blobs/${blob.sha}`);
       await writeFile(localPath, content);
-      console.log(`  + ${skill}/${relativePath}`);
+      console.log(`  + ${category}/${name}/${relativePath}`);
     }));
   }
 }
