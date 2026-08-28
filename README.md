@@ -33,7 +33,6 @@ From [github/awesome-copilot](https://github.com/github/awesome-copilot):
 - `create-technical-spike/` - Research and document technical spikes
 - `create-tldr-page/` - Create TLDR-style documentation pages
 - `dependabot/` - Comprehensive guide for configuring and managing GitHub Dependabot
-- `drawio/` - Create draw.io diagrams and export them to PNG
 - `gh-cli/` - GitHub CLI (gh) comprehensive reference for repositories, issues, pull requests, Actions, projects, releases, gists, codespaces, organizations, extensions, and all GitHub operations from the command line
 - `git-commit/` - Execute git commit with conventional commit message analysis, intelligent staging, and message generation
 - `git-flow-branch-creator/` - Intelligent Git Flow branch creator that analyzes git status/diff and creates appropriate branches following the nvie Git Flow branching model
@@ -88,6 +87,10 @@ Manually added:
 - `react-native-development/` - Core engineering conventions for building React Native applications with TypeScript. Covers project structure, component/hook placement, TypeScript standards, performance patterns, centralized locators and screen names, API hook patterns, i18n key formatting, unit testing with coverage gates, and the pre-commit quality workflow (lint, typecheck, test, snapshots, conventional commits).
 
 ### `presentation-creation/`
+
+From [github/awesome-copilot](https://github.com/github/awesome-copilot):
+
+- `drawio/` - Create draw.io diagrams and export them to PNG
 
 From [slidevjs/slidev](https://github.com/slidevjs/slidev):
 
