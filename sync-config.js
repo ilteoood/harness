@@ -15,7 +15,7 @@ export default [
       { name: 'create-technical-spike', category: 'core' },
       { name: 'create-tldr-page', category: 'core' },
       { name: 'dependabot', category: 'core' },
-      { name: 'drawio', category: 'core' },
+      { name: 'drawio', category: 'presentation-creation' },
       { name: 'gh-cli', category: 'core' },
       { name: 'git-commit', category: 'core' },
       { name: 'git-flow-branch-creator', category: 'core' },
