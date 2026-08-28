@@ -31,8 +31,8 @@ for (const { repo, branch = 'main', skills } of config) {
   const commit = (await ghJson(`/repos/${repo}/branches/${branch}`)).commit.sha;
   const tree = (await ghJson(`/repos/${repo}/git/trees/${commit}?recursive=1`)).tree;
 
-  for (const { name, category, path: customPath } of skills) {
-    const prefix = customPath ? `${customPath}/` : `skills/${name}/`;
+  for (const { name, category } of skills) {
+    const prefix = `skills/${name}/`;
     const blobs = tree.filter(t => t.type === 'blob' && t.path.startsWith(prefix));
     if (!blobs.length) {
       console.log(`  ${name}: not found, skipping`);
