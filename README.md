@@ -7,6 +7,7 @@ Skills for AI agents following the [skills.sh](https://skills.sh) format.
 Skills are grouped by the category of project they apply to:
 
 - `core/` - Universal skills reused across every project (git, GitHub, security, dev tooling). These stay in the root `.claude` folder.
+- `code-review/` - Skills for auditing branches and pull requests (correctness, security, maintainability).
 - `documentation/` - Skills for authoring, reviewing, and stress-testing written material (READMEs, specs, ADRs, design interviews).
 - `web-development/` - Skills specific to web frontends (React, UI/UX, design).
 - `nodejs-development/` - Skills specific to Node.js backends (Fastify, npm).
@@ -40,6 +41,14 @@ From [github/gh-stack](https://github.com/github/gh-stack):
 Manually added:
 
 - `localhost-run/` - Expose local HTTP, HTTPS, and TLS applications to the public internet via [localhost.run](https://localhost.run) SSH tunnels. Covers the basic `ssh -R` command, HTTP tunnel mode with auto-HTTPS and proxy headers, TLS passthrough for non-HTTP protocols, Custom Domain setup with DNS records, the Forever Free Tier restrictions, tunneling WordPress / web frameworks / SSH, and troubleshooting connection issues.
+
+### `code-review/`
+
+From [cursor/plugins](https://github.com/cursor/plugins):
+
+- `thermo-nuclear-code-quality-review/` - Run an extremely strict maintainability review for abstraction quality, giant files, and spaghetti-condition growth. Use for a deep code quality audit or especially harsh maintainability review.
+- `thermo-nuclear-review/` - Comprehensive security and correctness audit of a branch's changes, focused on bugs, breaking changes, security vulnerabilities, devex regressions, and feature-gate leaks.
+- `thermos/` - Launch both thermo-nuclear review subagents in parallel, then synthesize their findings into a single verdict. Requires the `thermo-nuclear-review-subagent` and `thermo-nuclear-code-quality-review-subagent` agents from the same plugin.
 
 ### `documentation/`
 
