@@ -27,17 +27,9 @@ export default [
     repo: 'mattpocock/skills',
     branch: 'main',
     skills: [
-      { name: 'grill-me', category: 'plan' },
-      { name: 'grill-with-docs', category: 'plan' },
-      { name: 'grilling', category: 'plan' },
-    ],
-  },
-  {
-    repo: 'mattpocock/skills',
-    branch: 'main',
-    skillsPath: 'skills/engineering',
-    skills: [
-      { name: 'wayfinder', category: 'plan' },
+      { name: 'grill-me', path: 'skills/productivity/grill-me', category: 'plan' },
+      { name: 'grilling', path: 'skills/productivity/grilling', category: 'plan' },
+      { name: 'wayfinder', path: 'skills/engineering/wayfinder', category: 'plan' },
     ],
   },
   {

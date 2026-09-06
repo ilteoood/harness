@@ -65,7 +65,6 @@ From [github/awesome-copilot](https://github.com/github/awesome-copilot):
 From [mattpocock/skills](https://github.com/mattpocock/skills):
 
 - `grill-me/` - A relentless interview to sharpen a plan or design. User-invoked wrapper around the `grilling` skill.
-- `grill-with-docs/` - A relentless interview that also produces ADRs and a glossary as the design tree is resolved.
 - `grilling/` - Interview the user relentlessly about a plan, decision, or idea until every branch of the design tree is resolved. Use when the user wants to stress-test their thinking or uses any 'grill' trigger phrase.
 - `wayfinder/` - Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.
 
