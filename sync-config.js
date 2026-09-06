@@ -28,6 +28,7 @@ export default [
     branch: 'main',
     skills: [
       { name: 'grill-me', path: 'skills/productivity/grill-me', category: 'plan' },
+      { name: 'grill-with-docs', path: 'skills/engineering/grill-with-docs', category: 'plan' },
       { name: 'grilling', path: 'skills/productivity/grilling', category: 'plan' },
       { name: 'wayfinder', path: 'skills/engineering/wayfinder', category: 'plan' },
     ],
