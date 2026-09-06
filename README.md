@@ -28,7 +28,6 @@ From [github/awesome-copilot](https://github.com/github/awesome-copilot):
 - `commit-message-storyteller/` - Generate meaningful commit messages using story-telling principles
 - `conventional-commit/` - Execute conventional commit format with smart commit message generation
 - `dependabot/` - Comprehensive guide for configuring and managing GitHub Dependabot
-- `gh-cli/` - GitHub CLI (gh) comprehensive reference for repositories, issues, pull requests, Actions, projects, releases, gists, codespaces, organizations, extensions, and all GitHub operations from the command line
 - `git-commit/` - Execute git commit with conventional commit message analysis, intelligent staging, and message generation
 - `git-flow-branch-creator/` - Intelligent Git Flow branch creator that analyzes git status/diff and creates appropriate branches following the nvie Git Flow branching model
 - `github-issues/` - Create, update, and manage GitHub issues using MCP tools
