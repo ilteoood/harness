@@ -16,7 +16,6 @@ export default [
       { name: 'create-tldr-page', category: 'plan' },
       { name: 'dependabot', category: 'core' },
       { name: 'drawio', category: 'presentation-creation' },
-      { name: 'gh-cli', category: 'core' },
       { name: 'git-commit', category: 'core' },
       { name: 'git-flow-branch-creator', category: 'core' },
       { name: 'github-issues', category: 'core' },
