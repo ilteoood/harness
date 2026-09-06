@@ -25,14 +25,14 @@ async function ghRaw(path) {
   return Buffer.from(await res.arrayBuffer());
 }
 
-for (const { repo, branch = 'main', skillsPath = 'skills', skills } of config) {
+for (const { repo, branch = 'main', skills } of config) {
   console.log(`Syncing from ${repo} (${branch})...`);
 
   const commit = (await ghJson(`/repos/${repo}/branches/${branch}`)).commit.sha;
   const tree = (await ghJson(`/repos/${repo}/git/trees/${commit}?recursive=1`)).tree;
 
-  for (const { name, category } of skills) {
-    const prefix = `${skillsPath}/${name}/`;
+  for (const { name, category, path: skillPath } of skills) {
+    const prefix = `${skillPath ?? `skills/${name}`}/`;
     const blobs = tree.filter(t => t.type === 'blob' && t.path.startsWith(prefix));
     if (!blobs.length) {
       console.log(`  ${name}: not found, skipping`);
