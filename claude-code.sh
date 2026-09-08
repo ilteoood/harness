@@ -32,12 +32,14 @@ skills add https://github.com/ilteoood/harness -g -a claude-code -y
 claude plugin marketplace add https://github.com/wakatime/claude-code-wakatime.git
 claude plugin marketplace add DietrichGebert/ponytail
 claude plugin marketplace add thedotmack/claude-mem
+claude plugin marketplace add pbakaus/impeccable
 
 claude plugin i claude-code-wakatime@wakatime
 claude plugin i typescript-lsp@claude-plugins-official
 claude plugin i rust-analyzer-lsp@claude-plugins-official
 claude plugin i ponytail@ponytail
 claude plugin i claude-mem
+claude plugin i impeccable
 
 npx -y ctx7 setup --claude --cli --api-key $CONTEXT7_API_KEY
 
