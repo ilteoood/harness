@@ -63,6 +63,7 @@ From [github/awesome-copilot](https://github.com/github/awesome-copilot):
 
 From [mattpocock/skills](https://github.com/mattpocock/skills):
 
+- `domain-modeling/` - Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a CONTEXT.md, or recording or editing an ADR.
 - `grill-me/` - A relentless interview to sharpen a plan or design. User-invoked wrapper around the `grilling` skill.
 - `grill-with-docs/` - A relentless interview that also produces ADRs and a glossary as the design tree is resolved.
 - `grilling/` - Interview the user relentlessly about a plan, decision, or idea until every branch of the design tree is resolved. Use when the user wants to stress-test their thinking or uses any 'grill' trigger phrase.
