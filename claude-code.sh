@@ -54,4 +54,4 @@ gh extension install github/gh-stack
 git config --global user.email "matteopietro.dazzi@gmail.com"
 git config --global user.name "Matteo Pietro Dazzi"
 
-paseo daemon start --foreground
+paseo daemon run
