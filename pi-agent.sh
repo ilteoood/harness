@@ -15,11 +15,7 @@ mkdir -p -m 755 /etc/apt/keyrings \
 && mkdir -p -m 755 /etc/apt/sources.list.d \
 && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
 
-curl -fsSL https://deb.nodesource.com/setup_24.x | bash
-
 curl -sL https://raw.githubusercontent.com/kerolloz/go-installer/master/go.sh | bash
-
-apt-get install gh nodejs -y
 
 gh auth setup-git
 gh extension install github/gh-stack
