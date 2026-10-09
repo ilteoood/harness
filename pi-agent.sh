@@ -17,6 +17,8 @@ mkdir -p -m 755 /etc/apt/keyrings \
 
 curl -sL https://raw.githubusercontent.com/kerolloz/go-installer/master/go.sh | bash
 
+apt-get update
+apt-get install gh -y
 gh auth setup-git
 gh extension install github/gh-stack
 
@@ -41,8 +43,8 @@ pi install npm:pi-goal-x
 pi install npm:pi-simplify
 pi install npm:@dietrichgebert/ponytail
 pi install npm:pi-hashline-edit-pro
-pi install npm:opencode-zen-oauth
 pi install npm:pi-btw
+pi install npm:pi-keep-going
 
 npx impeccable install --providers=pi --scope=global --global
 
