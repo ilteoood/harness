@@ -68,6 +68,8 @@ From [mattpocock/skills](https://github.com/mattpocock/skills):
 - `grill-with-docs/` - A relentless interview that also produces ADRs and a glossary as the design tree is resolved.
 - `grilling/` - Interview the user relentlessly about a plan, decision, or idea until every branch of the design tree is resolved. Use when the user wants to stress-test their thinking or uses any 'grill' trigger phrase.
 - `wayfinder/` - Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.
+- `prototype/` - Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether a state model or logic feels right, or explore what a UI should look like.
+- `research/` - Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent.
 
 ### `web-development/`
 

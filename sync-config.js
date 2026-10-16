@@ -31,6 +31,8 @@ export default [
       { name: 'grilling', path: 'skills/productivity/grilling', category: 'plan' },
       { name: 'domain-modeling', path: 'skills/engineering/domain-modeling', category: 'plan' },
       { name: 'wayfinder', path: 'skills/engineering/wayfinder', category: 'plan' },
+      { name: 'research', path: 'skills/engineering/research', category: 'plan' },
+      { name: 'prototype', path: 'skills/engineering/prototype', category: 'plan' },
     ],
   },
   {
