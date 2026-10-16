@@ -33,6 +33,9 @@ export default [
       { name: 'wayfinder', path: 'skills/engineering/wayfinder', category: 'plan' },
       { name: 'research', path: 'skills/engineering/research', category: 'plan' },
       { name: 'prototype', path: 'skills/engineering/prototype', category: 'plan' },
+      { name: 'to-spec', path: 'skills/engineering/to-spec', category: 'plan' },
+      { name: 'to-tickets', path: 'skills/engineering/to-tickets', category: 'plan' },
+      { name: 'implement', path: 'skills/engineering/implement', category: 'plan' },
     ],
   },
   {

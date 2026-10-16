@@ -70,6 +70,9 @@ From [mattpocock/skills](https://github.com/mattpocock/skills):
 - `wayfinder/` - Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.
 - `prototype/` - Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether a state model or logic feels right, or explore what a UI should look like.
 - `research/` - Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent.
+- `implement/` - Implement a piece of work based on a spec or set of tickets.
+- `to-spec/` - Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed.
+- `to-tickets/` - Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker (edges as text in one file per ticket locally, or native blocking links on a real tracker).
 
 ### `web-development/`
 
