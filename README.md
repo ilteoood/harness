@@ -9,6 +9,7 @@ Skills are grouped by the category of project they apply to:
 - `core/` - Universal skills reused across every project (git, GitHub, security, dev tooling). These stay in the root `.claude` folder.
 - `code-review/` - Skills for auditing branches and pull requests (correctness, security, maintainability).
 - `plan/` - Skills for planning, designing, and stress-testing written material (READMEs, specs, ADRs, implementation plans, design interviews).
+- `development/` - Skills for executing planned work in code — language-agnostic implementation workflows.
 - `web-development/` - Skills specific to web frontends (React, UI/UX, design).
 - `nodejs-development/` - Skills specific to Node.js backends (Fastify, npm).
 - `mobile-development/` - Skills specific to React Native mobile apps.
@@ -70,7 +71,15 @@ From [mattpocock/skills](https://github.com/mattpocock/skills):
 - `wayfinder/` - Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.
 - `prototype/` - Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether a state model or logic feels right, or explore what a UI should look like.
 - `research/` - Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent.
+- `to-spec/` - Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed.
+- `to-tickets/` - Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker (edges as text in one file per ticket locally, or native blocking links on a real tracker).
 
+### `development/`
+
+From [mattpocock/skills](https://github.com/mattpocock/skills):
+
+- `implement/` - Implement a piece of work based on a spec or set of tickets.
+- `implement-spec/` - Implement the result of /to-spec and /to-tickets in code.
 ### `web-development/`
 
 From [anthropics/skills](https://github.com/anthropics/skills):
