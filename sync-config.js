@@ -36,6 +36,7 @@ export default [
       { name: 'to-spec', path: 'skills/engineering/to-spec', category: 'plan' },
       { name: 'to-tickets', path: 'skills/engineering/to-tickets', category: 'plan' },
       { name: 'implement', path: 'skills/engineering/implement', category: 'plan' },
+      { name: 'implement-spec', path: 'skills/engineering/implement-spec', category: 'plan' },
     ],
   },
   {
