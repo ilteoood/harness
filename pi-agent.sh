@@ -22,7 +22,7 @@ apt-get install gh -y
 gh auth setup-git
 gh extension install github/gh-stack
 
-npm i -g skills pnpm @opencode/cli
+npm i -g skills pnpm @opencode/cli lighthouse
 
 skills add https://github.com/ilteoood/harness -g -a pi -y
 
