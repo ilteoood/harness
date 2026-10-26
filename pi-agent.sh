@@ -31,7 +31,6 @@ pi install npm:@upstash/context7-pi
 pi install npm:pi-mcp-adapter
 pi install npm:pi-hermes-memory
 pi install npm:pi-lens
-pi install npm:context-mode
 pi install npm:pi-subagents
 pi install npm:@narumitw/pi-plan-mode
 pi install npm:@juicesharp/rpiv-ask-user-question
@@ -45,18 +44,24 @@ pi install npm:@dietrichgebert/ponytail
 pi install npm:pi-hashline-edit-pro
 pi install npm:pi-btw
 pi install npm:pi-keep-going
+pi install npm:opencode-zen-oauth
+pi install npm:billion-context
+pi install npm:opencode-pi
 
 npx impeccable install --providers=pi --scope=global --global
 
 pi update --all
 
-gh release download --pattern "*aarch64-linux*" -O /tmp/tokensave.tar.gz -R aovestdipaperino/tokensave
-tar -xzf /tmp/tokensave.tar.gz -C /usr/local/bin
-rm /tmp/tokensave.tar.gz
-chmod +x /usr/local/bin/tokensave
-tokensave install --agent pi --git-hook yes
+#gh release download --pattern "*aarch64-linux*" -O /tmp/tokensave.tar.gz -R aovestdipaperino/tokensave
+#tar -xzf /tmp/tokensave.tar.gz -C /usr/local/bin
+#rm /tmp/tokensave.tar.gz
+#chmod +x /usr/local/bin/tokensave
+#tokensave install --agent pi --git-hook global
 
 git config --global user.email "matteopietro.dazzi@gmail.com"
 git config --global user.name "Matteo Pietro Dazzi"
 
+paseo plugin add nkwib/doc-viewer || echo 'Already installed'
+paseo plugin add ilteoood/opencode-zen-usage || echo 'Already installed'
+paseo plugin update --all --yes
 paseo daemon run
