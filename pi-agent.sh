@@ -22,7 +22,7 @@ apt-get install gh -y
 gh auth setup-git
 gh extension install github/gh-stack
 
-npm i -g skills pnpm @opencode/cli lighthouse
+npm i -g skills pnpm lighthouse
 
 skills add https://github.com/ilteoood/harness -g -a pi -y
 
@@ -46,7 +46,8 @@ pi install npm:pi-btw
 pi install npm:pi-keep-going
 pi install npm:opencode-zen-oauth
 pi install npm:billion-context
-pi install npm:opencode-pi
+pi install npm:pi-free
+pi install git:github.com/ilteoood/pi-router-restarter
 
 npx impeccable install --providers=pi --scope=global --global
 
