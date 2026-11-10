@@ -93,13 +93,4 @@ export default [
       { name: 'gh-stack', category: 'core' },
     ],
   },
-  {
-    repo: 'cursor/plugins',
-    branch: 'main',
-    skills: [
-      { name: 'thermo-nuclear-code-quality-review', path: 'thermos/skills/thermo-nuclear-code-quality-review', category: 'code-review' },
-      { name: 'thermo-nuclear-review', path: 'thermos/skills/thermo-nuclear-review', category: 'code-review' },
-      { name: 'thermos', path: 'thermos/skills/thermos', category: 'code-review' },
-    ],
-  },
 ];
