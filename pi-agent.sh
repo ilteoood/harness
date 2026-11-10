@@ -16,6 +16,7 @@ mkdir -p -m 755 /etc/apt/keyrings \
 && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
 
 curl -sL https://raw.githubusercontent.com/kerolloz/go-installer/master/go.sh | bash
+curl -fsSL https://bun.sh/install | bash
 
 apt-get update
 apt-get install gh -y
@@ -48,6 +49,9 @@ pi install npm:opencode-zen-oauth
 pi install npm:billion-context
 pi install npm:pi-free
 pi install git:github.com/ilteoood/pi-router-restarter
+pi install npm:@thinkscape/pi-thermos
+
+/root/.pi/agent/npm/node_modules/@thinkscape/pi-thermos/bin/pi-thermos.js install-agents --scope user --provider auto
 
 npx impeccable install --providers=pi --scope=global --global
 
