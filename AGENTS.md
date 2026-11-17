@@ -19,12 +19,12 @@ When I ask you to make a change in the code, you **MUST ALWAYS** follow this wor
   - pull the latest changes from the branch;
 - do the implementation needed to accomplish the task. If you need additional documentation, use `context7`. If a `CONTRIBUTING.md` exists, **ALWAYS** respect it;
 - **ALWAYS** run the commands used to verify the correctness of the implementation: this includes running the lint commands (for example, `cargo fmt` and `cargo clippy` in Rust project or the `lint` command in a NodeJS project) and the `test` command;
-- do self-review, using the `thermos` and `ponytail:ponytail-review` skills;
+- do self-review, using the `thermos` and `ponytail:ponytail-review` skills. Spawn a subagent each;
 - commit using the rules available in the `git-commit` skill. **NEVER** change git's `user.name` or `user.email` configurations;
 - open a new pull request using the gh CLI tool when pushing a new branch. If any pull request template exists, fill its sections; otherwise include: summary, changes, why, test plan, and linked issue.
 
 ## During code reviews
-To review any piece of code, you must use the `thermos` (for self-review) and `ponytail:ponytail-review` (for over-engineering) skills.
+To review any piece of code, you must use the `thermos` (for self-review) and `ponytail:ponytail-review` (for over-engineering) skills. Spawn a subagent each.
 
 When making comments, you **MUST ALWAYS** follow these rules:
 - avoid any sort of general recap about the changes that have been made;
