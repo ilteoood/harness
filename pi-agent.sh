@@ -32,7 +32,7 @@ pi install npm:@upstash/context7-pi
 pi install npm:pi-mcp-adapter
 pi install npm:pi-hermes-memory
 pi install npm:pi-lens
-#pi install npm:pi-subagents
+pi install npm:pi-subagents
 pi install npm:@narumitw/pi-plan-mode
 pi install npm:@juicesharp/rpiv-ask-user-question
 pi install npm:@juicesharp/rpiv-todo
