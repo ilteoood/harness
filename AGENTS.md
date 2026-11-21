@@ -6,6 +6,9 @@ When writing code, you **MUST** be as precise as possible, and extremely strict 
 Additionally, you **MUST ALWAYS** avoid any kind of inline comment that explains the underlying code. **ALWAYS** prefer descriptive names.
 When info are missing, you **MUST** ask to the user using the `AskUserQuestion` tool.
 
+## When spawning subagents
+Subagents **MUST ALWAYS** be spawned through the `paseo_*` tools, never through the `subagent` or `workflow` tools, so that I can see, inspect and steer them in Paseo.
+
 ## During code changes
 Before writing any piece of code, check through the available skills which one could help solving your task. For example:
 - in a fastify codebase, use the `fastify-best-practices` skill;
