@@ -66,7 +66,10 @@ pi update --all
 git config --global user.email "matteopietro.dazzi@gmail.com"
 git config --global user.name "Matteo Pietro Dazzi"
 
-paseo plugin add nkwib/doc-viewer || echo 'Already installed'
-paseo plugin add ilteoood/opencode-zen-usage || echo 'Already installed'
+paseo plugin add nkwib/doc-viewer
+paseo plugin add ilteoood/opencode-zen-usage
+paseo plugin add emosenkis/agent-keep-awake
+paseo plugin add ilteoood/paseo-sidebar-view
+paseo plugin add ilteoood/paseo-pi-actions
 paseo plugin update --all --yes
 paseo daemon run
