@@ -1,8 +1,15 @@
-# Skills
+# AI harness
 
-Skills for AI agents following the [skills.sh](https://skills.sh) format.
+Skills for AI agents following the [skills.sh](https://skills.sh) format, together with the scripts that configure the machines those agents run on.
 
-## Structure
+## Contents
+
+- `skills/` - The skill catalog, grouped by the category of project each skill applies to.
+- `claude-code.sh` - Provisions a fresh machine for Claude Code: system packages, language toolchains, GitHub CLI, this repo's skills, Claude Code plugins, and the supporting tooling.
+- `pi-agent.sh` - The same provisioning for the pi coding agent, plus the pi extensions used day to day.
+- `sync-config.js` - The upstream repository each skill comes from, with its target category.
+- `sync-skills.js` - Downloads every skill declared in `sync-config.js` into `skills/<category>/<name>`.
+- `AGENTS.md`, `CLAUDE.md` - The house rules agents must follow when changing code in any repository.
 
 Skills are grouped by the category of project they apply to:
 
@@ -120,8 +127,33 @@ From [slidevjs/slidev](https://github.com/slidevjs/slidev):
 
 - `slidev/` - Create and present web-based slidedecks for developers using Slidev with Markdown, Vue components, code highlighting, animations, and interactive features. Use when building technical presentations, conference talks, code walkthroughs, teaching materials, or developer decks.
 
+## Harness Configuration
+
+### `claude-code.sh`
+
+Provisions a Debian/Ubuntu machine from scratch:
+
+- System packages, Rust, Go, Bun, and Node.js 24.
+- The GitHub CLI with the `gh-stack` extension.
+- Global npm tools (`skills`, `pnpm`, `lighthouse`).
+- This repository's skills, installed globally for `claude-code` through `skills add`.
+- Claude Code plugins (WakaTime, TypeScript and Rust LSPs, ponytail, claude-mem, impeccable), Context7, and tokensave with its git hook.
+- The git identity and the paseo daemon.
+
+### `pi-agent.sh`
+
+Provisions the same baseline for `pi`, then installs the pi extensions used day to day: `skills add` targets `pi`, and the npm/git extensions cover context7, MCP adapter, memory, lens, plan mode, todo, workflows, web access, intercom, goals, ponytail, hashline editing, and context compression. It also registers the thermos agents, installs impeccable globally, and adds the paseo plugins before starting the daemon.
+
+### Syncing skills
+
+`node sync-skills.js` reads `sync-config.js`, authenticates through the `gh` CLI, and writes every declared skill into `skills/<category>/<name>`, preserving the upstream file layout. To add an upstream skill, declare its repository, branch, and category in `sync-config.js` instead of copying files by hand. Skills listed under "Manually added" in the catalog below are not part of that mapping and are edited in place.
+
 ## Usage
 
-Add skills to your AI agent configuration or use with compatible tools.
+Run `claude-code.sh` or `pi-agent.sh` on a fresh machine to get the agent and every skill in this repository installed globally. To install the skills alone, without the rest of the provisioning:
+
+```bash
+skills add https://github.com/ilteoood/harness -g -a claude-code -y
+```
 
 Core skills should be installed at the root `.claude` folder so they are available across every project. Skills scoped to a category should only be installed in the `.claude` folder of the projects they apply to.
