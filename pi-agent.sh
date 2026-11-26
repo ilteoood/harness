@@ -50,6 +50,7 @@ pi install npm:billion-context
 pi install npm:pi-free
 pi install git:github.com/ilteoood/pi-router-restarter
 pi install npm:@thinkscape/pi-thermos
+pi install git:github.com/jgrumboe/pi-github-copilot-auto
 
 /root/.pi/agent/npm/node_modules/@thinkscape/pi-thermos/bin/pi-thermos.js install-agents --scope user --provider auto
 
